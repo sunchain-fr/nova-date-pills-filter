@@ -1,9 +1,12 @@
 {
-    "name": "sunchain/nova-date-pills-filter",
-    "description": "A Laravel Nova filter.",
+    "name": "sunchain-fr/nova-date-pills-filter",
+    "description": "A Laravel Nova filter for Nova Dashboard.",
     "keywords": [
         "laravel",
-        "nova"
+        "nova",
+        "filter",
+        "dates",
+        "dashboard"
     ],
     "license": "MIT",
     "require": {
