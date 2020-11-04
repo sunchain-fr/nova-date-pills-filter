@@ -46,7 +46,7 @@ use DigitalCreative\ValueWidget\Widgets\ValueWidget;
 use Illuminate\Support\Collection;
 use Sunchain\NovaDatePillsFilter\DatePillsFilter;
 
-class SunInKWhValue extends ValueWidget
+class MyValueWidget extends ValueWidget
 {
     public function resolveValue(Collection $options, Filters $filters): ValueResult
     {
