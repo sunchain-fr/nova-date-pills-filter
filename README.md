@@ -1,6 +1,6 @@
 # Nova Dates Pill Filter
 
-![Nova Dates Pill Filter](https://raw.githubusercontent.com/sunchain-fr/nova-date-pills-filter/master/screenshots/screenshot.png)
+![Nova Dates Pill Filter](https://raw.githubusercontent.com/sunchain-fr/nova-date-pills-filter/master/screenshot/screenshot.png)
 
 A date filter to use with  [Nova Dashboard](https://github.com/dcasia/nova-dashboard).
 
