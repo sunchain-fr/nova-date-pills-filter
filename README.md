@@ -14,7 +14,7 @@ composer require sunchain-fr/nova-date-pills-filter
 
 ## Usage
 
-Register the `DatesPillFilter` tool within your view`
+Register the `DatePillsFilter` filter within your view`
 
 ```php
 use Sunchain\NovaDatePillsFilter\DatePillsFilter;
