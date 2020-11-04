@@ -17,7 +17,7 @@ class FilterServiceProvider extends ServiceProvider
     {
         Nova::serving(function (ServingNova $event) {
             Nova::script('nova-date-pills-filter', __DIR__.'/../dist/js/filter.js');
-            Nova::style('nova-date-pills-filter', __DIR__.'/../dist/css/filter.css');
+            $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'datesPillFilter');
         });
     }
 
