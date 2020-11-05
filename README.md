@@ -1,6 +1,6 @@
 # Nova Dates Pill Filter
 
-![Nova Dates Pill Filter](https://raw.githubusercontent.com/sunchain-fr/nova-date-pills-filter/master/screenshot/screenshot.png)
+![Nova Dates Pill Filter](https://raw.githubusercontent.com/sunchain-fr/nova-dates-pill-filter/master/screenshot/screenshot.png)
 
 A date filter to use with  [Nova Dashboard](https://github.com/dcasia/nova-dashboard).
 
@@ -9,15 +9,15 @@ A date filter to use with  [Nova Dashboard](https://github.com/dcasia/nova-dashb
 You can install the package via composer:
 
 ```
-composer require sunchain-fr/nova-date-pills-filter
+composer require sunchain-fr/nova-dates-pill-filter
 ```
 
 ## Usage
 
-Register the `DatePillsFilter` filter within your view`
+Register the `DatesPillFilter` filter within your view`
 
 ```php
-use Sunchain\NovaDatePillsFilter\DatePillsFilter;
+use Sunchain\NovaDatesPillFilter\DatesPillFilter;
 
 class MainView extends View
 {
@@ -25,7 +25,7 @@ class MainView extends View
     public function filters(): array
     {
         return [
-            new DatePillsFilter()
+            new DatesPillFilter()
         ];
     }
 
@@ -44,13 +44,13 @@ use DigitalCreative\NovaDashboard\Filters;
 use DigitalCreative\ValueWidget\Widgets\ValueResult;
 use DigitalCreative\ValueWidget\Widgets\ValueWidget;
 use Illuminate\Support\Collection;
-use Sunchain\NovaDatePillsFilter\DatePillsFilter;
+use Sunchain\NovaDatesPillFilter\DatesPillFilter;
 
 class MyValueWidget extends ValueWidget
 {
     public function resolveValue(Collection $options, Filters $filters): ValueResult
     {
-            $dates = $filters->getFilterValue(DatePillsFilter::class);
+            $dates = $filters->getFilterValue(DatesPillFilter::class);
             $from = Carbon::now()->subWeek();
             $to = Carbon::now();
             if (isset($dates['from']) && $dates['from'] != "") {
@@ -70,4 +70,4 @@ Please give a ⭐️ if this project helped you!
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://raw.githubusercontent.com/sunchain-fr/nova-date-pills-filter/master/LICENSE) for more information.
+The MIT License (MIT). Please see [License File](https://raw.githubusercontent.com/sunchain-fr/nova-dates-pill-filter/master/LICENSE) for more information.

@@ -184,7 +184,7 @@ module.exports = __webpack_require__(2);
 /***/ (function(module, exports, __webpack_require__) {
 
 Nova.booting(function (Vue, router, store) {
-  Vue.component('nova-date-pills-filter', __webpack_require__(3));
+  Vue.component('nova-dates-pill-filter', __webpack_require__(3));
 });
 
 /***/ }),
@@ -298,7 +298,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     mounted: function mounted() {
         this.$data.range = "week";
-        console.log(this.filter.from, this.filter.to);
         this.setDates(moment(this.filter.from), moment(this.filter.to));
     },
 
@@ -333,7 +332,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
         setDateLimits: function setDateLimits(from, to, newRange) {
             if (from.clone().add(1, newRange).isAfter(moment())) {
-                // set to to NOW
                 to = moment();
                 from = moment().subtract(1, newRange);
             } else {
@@ -356,10 +354,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         filter: function filter() {
             return this.$store.getters[this.resourceName + '/getFilter'](this.filterKey);
         },
-
-        // value() {
-        //     return this.filter.currentValue || {from: '', to: ''}
-        // },
         from: function from() {
             return this.filter.from;
         },

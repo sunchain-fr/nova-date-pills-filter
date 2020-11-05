@@ -54,7 +54,6 @@ export default {
     },
     mounted() {
         this.$data.range = "week"
-        console.log(this.filter.from, this.filter.to)
         this.setDates(moment(this.filter.from), moment(this.filter.to))
     },
     methods: {
@@ -88,7 +87,7 @@ export default {
             this.setDates(from, to)
         },
         setDateLimits: function (from, to, newRange) {
-            if (from.clone().add(1, newRange).isAfter(moment())) { // set to to NOW
+            if (from.clone().add(1, newRange).isAfter(moment())) {
                 to = moment()
                 from = moment().subtract(1, newRange)
             } else {
@@ -111,9 +110,6 @@ export default {
         filter() {
             return this.$store.getters[`${this.resourceName}/getFilter`](this.filterKey)
         },
-        // value() {
-        //     return this.filter.currentValue || {from: '', to: ''}
-        // },
         from() {
             return this.filter.from
         },

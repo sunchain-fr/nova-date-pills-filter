@@ -1,3 +1,3 @@
 Nova.booting((Vue, router, store) => {
-  Vue.component('nova-date-pills-filter', require('./components/Filter'))
+  Vue.component('nova-dates-pill-filter', require('./components/Filter'))
 })

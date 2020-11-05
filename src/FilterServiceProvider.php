@@ -1,6 +1,6 @@
 <?php
 
-namespace Sunchain\NovaDatePillsFilter;
+namespace Sunchain\NovaDatesPillFilter;
 
 use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Events\ServingNova;
@@ -16,7 +16,7 @@ class FilterServiceProvider extends ServiceProvider
     public function boot()
     {
         Nova::serving(function (ServingNova $event) {
-            Nova::script('nova-date-pills-filter', __DIR__.'/../dist/js/filter.js');
+            Nova::script('nova-dates-pill-filter', __DIR__.'/../dist/js/filter.js');
             $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'datesPillFilter');
         });
     }

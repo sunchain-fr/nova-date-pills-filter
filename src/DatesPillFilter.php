@@ -1,19 +1,19 @@
 <?php
 
-namespace Sunchain\NovaDatePillsFilter;
+namespace Sunchain\NovaDatesPillFilter;
 
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Laravel\Nova\Filters\Filter;
 
-class DatePillsFilter extends Filter
+class DatesPillFilter extends Filter
 {
     /**
      * The filter's component.
      *
      * @var string
      */
-    public $component = 'nova-date-pills-filter';
+    public $component = 'nova-dates-pill-filter';
 
     public function __construct()
     {
