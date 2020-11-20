@@ -18,7 +18,7 @@ class DatesPillFilter extends Filter
     public function __construct()
     {
         $this->withMeta([
-            'from' => Carbon::now()->subDay()->subWeek()->toDateString(),
+            'from' => Carbon::now()->subDay()->subMonth ()->toDateString(),
             'to' => Carbon::now()->subDay()->toDateString(),
         ]);
     }
