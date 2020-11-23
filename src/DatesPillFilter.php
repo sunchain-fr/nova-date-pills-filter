@@ -2,6 +2,7 @@
 
 namespace Sunchain\NovaDatesPillFilter;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Laravel\Nova\Filters\Filter;
@@ -18,7 +19,7 @@ class DatesPillFilter extends Filter
     public function __construct()
     {
         $this->withMeta([
-            'from' => Carbon::now()->subDay()->subMonth ()->toDateString(),
+            'from' => Carbon::now()->subDay()->subMonth()->toDateString(),
             'to' => Carbon::now()->subDay()->toDateString(),
         ]);
     }
@@ -26,10 +27,10 @@ class DatesPillFilter extends Filter
     /**
      * Apply the filter to the given query.
      *
-     * @param \Illuminate\Http\Request $request
-     * @param \Illuminate\Database\Eloquent\Builder $query
+     * @param Request $request
+     * @param Builder $query
      * @param mixed $value
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @return Builder
      */
     public function apply(Request $request, $query, $value)
     {
@@ -39,7 +40,7 @@ class DatesPillFilter extends Filter
     /**
      * Get the filter's available options.
      *
-     * @param \Illuminate\Http\Request $request
+     * @param Request $request
      * @return array
      */
     public function options(Request $request)
