@@ -30,7 +30,7 @@ class DatesPillFilter extends Filter
      * @param Request $request
      * @param Builder $query
      * @param mixed $value
-     * @return Builder
+     * @return Buil<der
      */
     public function apply(Request $request, $query, $value)
     {
