@@ -49,11 +49,11 @@ export default {
     },
     data: function () {
         return {
-            range: "month", // Day, week or month
+            range: "month", // Day, week or month, changed default
         }
     },
     mounted() {
-        this.$data.range = "month"
+        this.$data.range = "month" // changed default
         this.setDates(moment(this.filter.from), moment(this.filter.to))
     },
     methods: {
