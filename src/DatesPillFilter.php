@@ -19,7 +19,7 @@ class DatesPillFilter extends Filter
     public function __construct()
     {
         $this->withMeta([
-            'from' => Carbon::now()->subDay()->subMonth()->toDateString(),
+            'from' => Carbon::now()->subDay()->subDay()->toDateString(),
             'to' => Carbon::now()->subDay()->toDateString(),
         ]);
     }
@@ -30,7 +30,7 @@ class DatesPillFilter extends Filter
      * @param Request $request
      * @param Builder $query
      * @param mixed $value
-     * @return Buil<der
+     * @return Builder
      */
     public function apply(Request $request, $query, $value)
     {
