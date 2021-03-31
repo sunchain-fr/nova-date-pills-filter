@@ -48,6 +48,7 @@ class DatesPillFilter extends Filter
             __('datesPillFilter::common.day') => 'day',
             __('datesPillFilter::common.week') => 'week',
             __('datesPillFilter::common.month') => 'month',
+            __('datesPillFilter::common.year') => 'year',
         ];
     }
 }
